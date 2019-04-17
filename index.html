@@ -1,0 +1,23 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Découverte Vue.js</title>
+</head>
+
+<body>
+    <h1>Découverte Vue.js</h1>
+    <div id="app">
+        <!-- si l'on veut integrer une variable dans un lien on utilise v-bind:href="link"-->
+        <!-- on peut egalement juste mettre :href="link"-->
+      <a :href="link" :title="message">  {{ message }} </a>
+    </div>
+
+    <!--<script src="js/ajax.js"></script>--> <!-- TOUJOURS PREMIER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
