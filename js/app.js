@@ -7,8 +7,28 @@ new Vue({
     // on defini le state grace a la cle data qui va etre un tableau qui regroupe les variables 
     // que l'on souhaite injecter a vue
     data : {
-        message: 'Coucou du message',
-        link: 'http://google.fr'
+        message: 'Lien vers google',
+        link: 'http://google.fr',
+       /*  success : true, */
+        cls: 'success',
+        persons: ['Marion', 'Laurie', 'Etienne'],
+    },
+
+    methods:{
+        close: function(){
+            // on peut changer la valeur du message dans methods
+            // this.message = "Fermé"
+            // avec methods on accede a toutes les proprietes de la vue
+            this.success = false
+
+        }, 
+        style: function(){
+            if (this.success){
+                return {color : 'green'}
+            } else {
+                return {color: 'red'}
+            }
+        }
     }
 
 })

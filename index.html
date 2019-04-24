@@ -13,9 +13,54 @@
         <!-- si l'on veut integrer une variable dans un lien on utilise v-bind:href="link"-->
         <!-- on peut egalement juste mettre :href="link"-->
       <a :href="link" :title="message">  {{ message }} </a>
+
+        <!-- <ul>  -->
+          <!--On peut également faire des boucles avec v-for-->
+          <!-- <li v-for="person in persons">{{person}}</li>
+        </ul> -->
+
+        <!-- on integre le message en valeur -->
+        <input type="checkbox" v-model="cls">
+
+    <!-- On peut directement faire des if ici -->
+    <!--<div class="ui success message" v-if="success">--> 
+    
+    <!-- on creer class, si success est defini > affiche success sinon error 
+    <div class="ui success message" :class="success ? 'success' : 'error'"> -->
+
+    <!-- on a également la possibilité de lui envoyer directement un objet -->
+    <div class="ui success message" :class="{success: success, error: !success}" :style="style()">     
+    <!-- on peut y mettre également du style :style="{background:'black'}" ou :style="style" si on l'a ajouté dans  -->
+
+        <!-- on integre le message en valeur -->
+        <!--  <input type="text" :value="message"> -->
+
+        <!-- v-model indique que le champs va etre lié au model et modifie donc la variable automatiquement -->
+        <input type="text" v-model="message">
+
+
+
+        <!-- 1ere syntaxe d'appel d'event -->
+        <!-- <i class="close icon" v-on:click="close">close</i>-->
+
+        <!-- 2eme syntaxe d'appel d'event -->
+        <i class="close icon" @click="close">close</i>
+
+        <p>{{message}}</p>
     </div>
 
-    <!--<script src="js/ajax.js"></script>--> <!-- TOUJOURS PREMIER -->
+    <!-- v-else équivaut à v-if="!success" -->
+    <!--<div class="success" v-else>
+        <p>Ca n'a pas marché</p>
+    </div>-->
+
+    <!-- le v-show va donner un display none à la class alors que le if le sup completement -->
+    <!--<div class="success" v-show="success">
+        <p>Bravo votre enregistrement a marché</p>
+    </div>-->
+
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
     <script src="js/app.js"></script>
 </body>
