@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Directives</title>
+</head>
+
+<body>
+    <h1>Directives</h1>
+    <div id="directives">
+        <p @click="demo2">
+            <!-- <a href="http://google.fr" @click="demo">Démonstration</a> -->
+            
+            <!-- On fait donc appel au modifieur -->
+            <!--  <a href="http://google.fr" @click.prevent ="demo">Démonstration</a> -->
+
+            <!-- on peut également stopper la propagation pour éviter que l'event fasse des bubles vers le haut -->
+            <!-- on peut combiner ! -->
+            <!-- <a href="http://google.fr" @click.stop.prevent ="demo">Démonstration</a>  -->
+
+            <!-- capturer le click -->
+            <!--  <a href="http://google.fr" @click.capture ="demo">Démonstration</a>  -->
+
+            <!-- permet de dire "il faut vraiment qu'on ai cliqué sur l'élement là!" -->
+            <!-- <a href="http://google.fr" @click.self ="demo">Démonstration</a>  -->
+
+            <!-- on a bien un modifieur ici qui change "message" -->
+            <!--  <input type="text" v-model="message"> -->
+
+            <!-- LAZY permet de valider le changement lors d'un click en dehors du champs -->
+            <!-- pratique pour les formulaires, cela evite que trop d'events soient lancés -->
+            <!-- <input type="text" v-model.lazy="message"> -->
+
+            <!-- permet de dire "je veux que tu rentre un chiffre dans ce champ" -->
+            <!-- <input type="text" v-model.number="message"> -->
+
+            <!-- permet d'enlever les espaces autours -->
+            <!-- <input type="text" v-model.trim="message"> -->
+
+            <!-- le keycode permet de lancer l'event avec la touche spécifiée -->
+            <!-- <input type="text" @keyup.space="demo"> -->
+
+            <!-- on créé une nouvelle directives avec comme nom v-salut -->
+            <!-- on précise une valeur à l'interieur -->
+            <!-- on y ajoute des modifieurs ( a b c ) -->
+            <input type="text" v-salut.a.b.c="message">
+            <input type="text" v-model="message">
+
+            ==={{ message }}===
+        </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="js/directives.js"></script>
+</body>
+
+</html>
