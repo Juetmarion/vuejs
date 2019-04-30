@@ -1,0 +1,29 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Watchers & combine</title>
+</head>
+
+<body>
+    <h1>Watchers & combine</h1>
+    <div id="watchers">
+       <!--  <input type="checkbox" v-model="success">
+        <input type="text" v-model="message">
+        {{ message }}
+            <div class="ui message" :class="cls">
+            Salut les gens
+        </div> -->
+        <!-- EXEMPLE AVEC NOM ET PRENOM -->
+        Prénom : {{ firstname }} <br>
+        Nom : {{ lastname }} <br>
+        Nom entier :  <input type="text" v-model="fullname">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="js/watcherscombine.js"></script>
+</body>
+
+</html>
