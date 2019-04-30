@@ -13,7 +13,7 @@
         <p @click="demo2">
             <!-- <a href="http://google.fr" @click="demo">Démonstration</a> -->
             
-            <!-- On fait donc appel au modifieur -->
+            <!-- On fait donc appel au modifier -->
             <!--  <a href="http://google.fr" @click.prevent ="demo">Démonstration</a> -->
 
             <!-- on peut également stopper la propagation pour éviter que l'event fasse des bubles vers le haut -->
@@ -26,7 +26,7 @@
             <!-- permet de dire "il faut vraiment qu'on ai cliqué sur l'élement là!" -->
             <!-- <a href="http://google.fr" @click.self ="demo">Démonstration</a>  -->
 
-            <!-- on a bien un modifieur ici qui change "message" -->
+            <!-- on a bien un modifier ici qui change "message" -->
             <!--  <input type="text" v-model="message"> -->
 
             <!-- LAZY permet de valider le changement lors d'un click en dehors du champs -->
@@ -44,7 +44,7 @@
 
             <!-- on créé une nouvelle directives avec comme nom v-salut -->
             <!-- on précise une valeur à l'interieur -->
-            <!-- on y ajoute des modifieurs ( a b c ) -->
+            <!-- on y ajoute des modifiers ( a b c ) -->
             <input type="text" v-salut.a.b.c="message">
             <input type="text" v-model="message">
 
